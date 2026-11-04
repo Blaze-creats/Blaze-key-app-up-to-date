@@ -23,7 +23,7 @@ const crypto = require('crypto')
 // ======================= CONFIG =======================
 const PORT = parseInt(process.env.PORT || '3000', 10)
 const DATA_FILE = path.join(__dirname, 'kmj-data.json')
-const DEFAULT_PASSWORD = 'zyrox2027'
+const DEFAULT_PASSWORD = 'blaze7617'
 
 // ======================= STORAGE (JSON file) =======================
 let db = null
@@ -269,7 +269,7 @@ function adminKeysCreate (res, body) {
   const plan = body.plan || 'DAY'
   const made = []
   for (let i = 0; i < n; i++) {
-    const key = generateKey(body.prefix || 'KMJ')
+    const key = generateKey(body.prefix || 'BLAZE')
     db.keys.unshift({ id: uid(), key, plan, status: 'UNUSED', deviceId: null, deviceName: null, activatedAt: null, expiresAt: null, createdAt: Date.now() })
     made.push(key)
   }
